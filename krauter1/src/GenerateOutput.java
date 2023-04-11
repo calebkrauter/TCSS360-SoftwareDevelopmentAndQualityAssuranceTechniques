@@ -2,9 +2,9 @@ import java.math.BigDecimal;
 import java.util.Random;
 
 public class GenerateOutput {
-
-    private int myRows = 100;
-    private int myCols = 100;
+// TODO support input of 1x1
+    private int myRows = 10;
+    private int myCols = 10;
     private int myVal = 0;
     private int thePercentInput = 75;
     private boolean isSafeSpace = false;
