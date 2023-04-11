@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MS1/MS1.iml" filepath="$PROJECT_DIR$/MS1/MS1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TCSS-360-Software-Development-and-Quality-Assurance-Techniques.iml" filepath="$PROJECT_DIR$/.idea/TCSS-360-Software-Development-and-Quality-Assurance-Techniques.iml" />
+      <module fileurl="file://$PROJECT_DIR$/krauter1/krauter1.iml" filepath="$PROJECT_DIR$/krauter1/krauter1.iml" />
+    </modules>
+  </component>
+</project>
