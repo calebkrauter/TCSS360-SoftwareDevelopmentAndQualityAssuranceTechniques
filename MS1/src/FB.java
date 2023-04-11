@@ -1,15 +1,36 @@
+import java.util.Random;
+
 public class FB {
 
     public void doFB() {
-        // TODO fill the bucket with a val++ after on safe space is fully up to date then zero out the variable val and use it for the next bucket.
-        int val = 2;
-        int[] bucket = new int[]{1,2,3,4};
-        String[] A = new String[]{".", ".", ".", ".", ".",};
+        String[] inArray = new String[]{".", ".", ".", ".", ".", ".", ".", ".", ".", ".",};
 
-        for (int i = 0; i < bucket.length; i++)
-        bucket[1] += i;
-        A[1] = String.valueOf(bucket[1]);
-        System.out.println(A[0] + " " + A[1]);
+        Random randomIndex = new Random();
+        int numOfMines = 5;
+
+        // Place Mines
+        for (int i = 0; i < numOfMines; i++) {
+            int currentRandomVal = randomIndex.nextInt(0, inArray.length - 1);
+
+            while (inArray[currentRandomVal] == "*") {
+                // If mine in space recalculate index
+                currentRandomVal = randomIndex.nextInt(0, inArray.length - 1);
+            }
+            if (inArray[currentRandomVal] != "*") {
+                inArray[currentRandomVal] = "*";
+            }
+        }
+        // Place safe spaces
+        for (int k = numOfMines; k < inArray.length; k++) {
+            if (inArray[k] != "*") {
+                inArray[k] = ".";
+            }
+        }
+        // Print out array
+        for (int j = 0; j < inArray.length; j++) {
+            System.out.print(inArray[j]);
+
+        }
     }
 
 }

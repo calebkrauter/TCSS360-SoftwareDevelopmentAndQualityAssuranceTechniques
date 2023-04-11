@@ -1,24 +1,21 @@
 import java.math.BigDecimal;
+import java.util.Random;
 
 public class GenerateOutput {
 
-    private int myRows = 10;
-    private int myCols = 10;
+    private int myRows = 100;
+    private int myCols = 100;
     private int myVal = 0;
-    private int thePercentInput = 50;
+    private int thePercentInput = 75;
     private boolean isSafeSpace = false;
-    private String[] A = new String[myCols*myRows];
-    String[][] inArray = new String[myCols + 1][myRows + 1];
+
+    private String[] A = new String[myCols*myRows+1];
+    String[][] inArray = new String[myCols+2][myRows+2];
 
 
     // TODO - createHint method to consolidate test cases
     // TODO - idea to create a buffer around the mine field to keep test cases lower
-    // Example of a mine and its adjacent safe spaces
-    /*
-     1 2 3
-     4 * 5
-     6 7 8
-      */
+
 
     public GenerateOutput() {
         generateInput();
@@ -28,11 +25,14 @@ public class GenerateOutput {
     }
 
     private void buildArray() {
-        int i = 0;
-        for (int x = 0; x < myCols; x++) {
-            for (int y = 0; y < myRows; y++) {
-                inArray[x][y] = A[i];
+        int i = 1;
+        for (int y = 1; y < myCols+1; y++) {
+            System.out.println();
+            for (int x = 1; x < myRows+1; x++) {
 
+                inArray[y][x] = A[i];
+                System.out.print(inArray[y][x]);
+//                System.out.println(inArray[x]);
                 // Print mines
 //                if (inArray[x][y] == "*") {
 //                    System.out.print(inArray[x][y].toString());
@@ -43,24 +43,23 @@ public class GenerateOutput {
     }
 
     private void printArray() {
-
-        for (int x = 0; x < myCols; x++) {
+System.out.println();
+        for (int y = 1; y < myCols+2; y++) {
             System.out.println();
-            for (int y = 0; y < myRows; y++) {
-                if (x > 0 && y > 0 && x < myCols && y < myRows) {
-
-                    if (isSafeSpace(x, y) && inArray[x][y-1] == "*") {
-                        myVal++;
-                        System.out.print(myVal);
-                    }
-                    myVal = 0;
+            for (int x = 1; x < myRows+2; x++) {
+                if (x > 0 && y > 0 && x < myCols+1 && y < myRows+1) {
+                if (inArray[y][x] == ".") {
+                    findAdjacentSpaces(y, x);
+                } else if(inArray[y][x] == "*") {
+                    System.out.print(inArray[y][x]);
+                }
 
                 }
             }
         }
     }
 
-    private void findAdjacentSpaces(int theX, int theY) {
+    private void findAdjacentSpaces(int theY, int theX) {
 
         /*
         Test cases
@@ -72,124 +71,104 @@ public class GenerateOutput {
 
          */
 
+        // Example of a mine and its adjacent safe spaces
+    /*
+     1 2 3
+     4 * 5
+     6 7 8
+      */
+//        if (theY - 1 > 0 && theX - 1 > 0) // Might need to include bounds for bottom and far right.
+        // Adjacent 1
+        if (theY - 1 > 0 && theX - 1 > 0 && inArray[theY][theX] == "." && inArray[theY-1][theX-1] == "*") {
+            myVal++;
 
-//        if (theX > 0 && theX < myCols && theY > 0 && theY < myRows) {
-            if (!isSafeSpace(theX, theY) && inArray[theX][theY] == "*") {
-                myVal++;
-                System.out.print(myVal);
-            }
-            myVal = 0;
-//        }
-    }
-
-    private boolean isSafeSpace(int theX, int theY) {
-        if (inArray[theX][theY] == ".") {
-            setSafeSpace(true);
-            return isSafeSpace;
         }
-        return isSafeSpace;
+
+        // Adjacent 2
+        if (theY - 1 > 0 && inArray[theY][theX] == "." && inArray[theY-1][theX] == "*") {
+            myVal++;
+        }
+
+        // Adjacent 3
+        if (theY - 1 > 0 && theX + 1 < myCols + 1 && inArray[theY][theX] == "." && inArray[theY-1][theX+1] == "*") {
+            myVal++;
+        }
+
+        // Adjacent 4
+        if (theX - 1 > 0 && inArray[theY][theX] == "." && inArray[theY][theX-1] == "*") {
+            myVal++;
+        }
+
+        // Adjacent 5
+        if (theX + 1 < myCols + 1 && inArray[theY][theX] == "." && inArray[theY][theX+1] == "*") {
+            myVal++;
+        }
+
+        // Adjacent 6
+        if (theY + 1 < myRows + 1 && theX - 1 > 0 && inArray[theY][theX] == "." && inArray[theY+1][theX-1] == "*") {
+            myVal++;
+        }
+
+        // Adjacent 7
+        if (theY + 1 < myRows + 1 && inArray[theY][theX] == "." && inArray[theY+1][theX] == "*") {
+            myVal++;
+        }
+
+        // Adjacent 8
+        if (theY + 1 < myRows + 1 && theX + 1 < myCols + 1 && inArray[theY][theX] == "." && inArray[theY+1][theX+1] == "*") {
+            myVal++;
+        }
+
+        if (inArray[theY][theX] == ".") {
+            inArray[theY][theX] = String.valueOf(myVal);
+            System.out.print(inArray[theY][theX]);
+        }
+        myVal = 0;
     }
-
-    private void setSafeSpace(boolean theValue) {
-        isSafeSpace = theValue;
-    }
-
-
-//    public void generateOutput() {
-//
-//        int outputColCounter = 1;
-//        System.out.println();
-//
-//        for (int i = 0; i < A.length; i++) {
-//
-//            // Formulas for adjacent mines
-//            int locOfFirstAdjacent = (i - myRows - 1);
-//            int locOfSecondAdjacent = (i - myRows);
-//            int locOfThirdAdjacent = (i - myRows + 1);
-//            int locOfLeftAdjacent = (i - 1);
-//            int locOfRightAdjacent = (i + 1);
-//            int locOfSixthAdjacent = (i + myRows - 1);
-//            int locOfSeventhAdjacent = (i + myRows);
-//            int locOfEighthAdjacent = (i + myRows + 1);
-//
-//            // Safe spaces test cases
-//            if (A[i] == ".") {
-//
-//                if (A[locOfFirstAdjacent] == "*" && i % myCols != 0) {
-//                    myVal++;
-//                }
-//                if (A[locOfSecondAdjacent] == "*") {
-//                    myVal++;
-//                }
-//                if (A[locOfThirdAdjacent] == "*") { // do i need to use i % myCols != 0?
-//                    myVal++;
-//                }
-//                if (A[locOfLeftAdjacent] == "*" && i % myCols != 0 && i % myCols != 1) {
-//                    myVal++;
-//                }
-//                if (A[locOfRightAdjacent] == "*") {
-//                    myVal++;
-//                }
-//                if (A[locOfSixthAdjacent] == "*") {
-//                    myVal++;
-//                }
-//                if (A[locOfSeventhAdjacent] == "*") {
-//                    myVal++;
-//                }
-//                if (A[locOfEighthAdjacent] == "*") {
-//                    myVal++;
-//                }
-//
-//                A[i] = String.valueOf(myVal);
-//                System.out.print(A[i]);
-////                findFirstAdjacent(i);
-//            } else { // output mines
-//                System.out.print(A[i]);
-//            }
-//            myVal = 0;
-//
-//            // Produce line after end of row
-//            if ((outputColCounter) % myCols == 0) {
-//                System.out.println();
-//            }
-//            outputColCounter++;
-//        }
-//    }
 
     public void generateInput() {
         // Input generator
         // Takes in user input of Dimensions n and m
         // Takes input of percentage/amount of mines
-
+        A[0] = "0";
         int numOfMinesToPlace = (((BigDecimal.valueOf(myCols).multiply(BigDecimal.valueOf(myRows)).divide(BigDecimal.valueOf(100)))).multiply(BigDecimal.valueOf(thePercentInput))).intValue();
+        if (thePercentInput == 0) {
+            numOfMinesToPlace = 0;
+        } else {
+            numOfMinesToPlace = numOfMinesToPlace + 1;
+        }
         int numOfSafeSpaces = (myCols*myRows - numOfMinesToPlace);
         int colCounter = 1;
         int amountOfMines = numOfMinesToPlace;
+        Random randomIndex = new Random();
 
-        for (int n = 0; n <= myRows; n++) {
-            for (int i = 0; i <= amountOfMines; i++) {
+        // Place Mines
+        for (int i = 1; i < amountOfMines; i++) {
+            int currentRandomVal = randomIndex.nextInt(1, A.length);
 
-                if (numOfMinesToPlace > 0) {
-                    if ((colCounter - 1) % myCols == 0) {
-                        System.out.println();
-                    }
-                    colCounter++;
-                    A[i] = "*";
-//                    System.out.print(i);
-                    System.out.print(A[i]);
-                    numOfMinesToPlace--;
-
-                }
+            while (A[currentRandomVal] == "*") {
+                // If mine in space recalculate index
+                currentRandomVal = randomIndex.nextInt(1, A.length);
+            }
+            if (A[currentRandomVal] != "*") {
+                A[currentRandomVal] = "*";
             }
         }
-        for (int i = amountOfMines; i < numOfSafeSpaces*2; i++) {
+        // Place safe spaces
+        for (int k = 1; k < A.length; k++) {
+            if (A[k] == null) {
+                A[k] = ".";
+            }
+        }
+        // Print out array
+        for (int j = 1; j < A.length; j++) {
             if ((colCounter - 1) % myCols == 0) {
                 System.out.println();
             }
             colCounter++;
-            A[i] = ".";
-//            System.out.print(i);
-            System.out.print(A[i]);
+            System.out.print(A[j]);
+
         }
+
     }
 }
