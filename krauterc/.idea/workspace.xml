@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f42295a2-50fc-479f-9f2f-ca71bbba56e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../MiscInputReader/MiscInputReader.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/TCSS-360-Software-Development-and-Quality-Assurance-Techniques.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/TCSS-360-Software-Development-and-Quality-Assurance-Techniques.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InputGenerator/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../InputGenerator/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InputGenerator/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../InputGenerator/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InputGenerator/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../InputGenerator/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InputGenerator/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../InputGenerator/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InputGenerator/InputGenerator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../InputGenerator/InputGenerator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InputGenerator/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../InputGenerator/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InputGenerator/src/ProduceInputFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/../InputGenerator/src/ProduceInputFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../krauter1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../krauter1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../krauter1/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../krauter1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../krauter1/krauter1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/krauterc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../krauter1/out/production/krauter1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/krauter1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../krauter1/src/GenerateOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenerateOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../krauter1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minesweeper_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../minesweeper_input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/InputGenerator/ProduceInputFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/InputGenerator/ProduceInputFields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/MS1/ProduceInputFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/MS1/ProduceInputFields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/krauter1/GenerateOutput.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/krauter1/GenerateOutput.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2OJk0coRgoZ9LmezYZK3RDnqX7U" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="krauterc" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GenerateOutputTest.testOfficialInputAndOutput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="krauterc" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GenerateOutputTest" />
+      <option name="METHOD_NAME" value="testOfficialInputAndOutput" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.GenerateOutputTest.testOfficialInputAndOutput" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f42295a2-50fc-479f-9f2f-ca71bbba56e7" name="Changes" comment="" />
+      <created>1681285849955</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681285849955</updated>
+    </task>
+    <servers />
+  </component>
+</project>

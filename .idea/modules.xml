@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/InputGenerator/InputGenerator.iml" filepath="$PROJECT_DIR$/InputGenerator/InputGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/TCSS-360-Software-Development-and-Quality-Assurance-Techniques.iml" filepath="$PROJECT_DIR$/.idea/TCSS-360-Software-Development-and-Quality-Assurance-Techniques.iml" />
-      <module fileurl="file://$PROJECT_DIR$/krauter1/krauter1.iml" filepath="$PROJECT_DIR$/krauter1/krauter1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/krauterc/krauterc.iml" filepath="$PROJECT_DIR$/krauterc/krauterc.iml" />
     </modules>
   </component>
 </project>
